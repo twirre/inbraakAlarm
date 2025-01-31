@@ -13,8 +13,8 @@ code: zorg voor een melding, bijvoorbeeld je naam, op het scherm
 doel: grove leren kennen
 actie: aansluiten grove led
 code: gebruik knop A op de micro.bit, om 
-- micro.bit één keer te laten piepen
-- grove: Lampje drie keer laten knipperen
+* micro.bit één keer te laten piepen
+* grove: Lampje drie keer laten knipperen
 
 ## stap 3: Boef gedetecteerd
 doel: inbraakalarm bouwen, basis versie
@@ -23,6 +23,6 @@ Code: als je in de buurt komt moet het alarm af gaan.
 
 ## stap extra: hoe wil je het inbraakalarm uitbreiden?
 surgesties: 
-- led strip gebruiken ipv led [moeilijkheidsgraad: MIDDEN]
-- tellen hoe vaak het alarm is afgegaan en op het schermpje tonen [moeilijkheidsgraad: MIDDEN]
-- radio sigaal doorsturen naar de tweede micro.bit [moeilijkheidsgraad: MOEILIJK]
+* led strip gebruiken ipv led [moeilijkheidsgraad: MIDDEN]
+* tellen hoe vaak het alarm is afgegaan en op het schermpje tonen [moeilijkheidsgraad: MIDDEN]
+* radio sigaal doorsturen naar de tweede micro.bit [moeilijkheidsgraad: MOEILIJK]
