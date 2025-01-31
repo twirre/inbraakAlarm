@@ -1,6 +1,8 @@
 # inbraakAlarm
 project voor de jeugd met micro.bit en grove inventorkit
 
+IDE: https://makecode.microbit.org/
+
 opgebouwd in de volgende stappen
 
 stap 1: Welkom! 
