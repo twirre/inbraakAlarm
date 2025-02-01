@@ -7,7 +7,16 @@ opgebouwd in de volgende stappen
 
 ## stap 1: Welkom
 **doel:** micro.bit leren kennen
-**code:** zorg voor een melding, bijvoorbeeld je naam, op het scherm
+<details>
+<summary>zorg voor een melding, bijvoorbeeld je naam, op het scherm</summary>
+
+```
+JAVASCRIPT;
+```
+FOTO CODE  
+![Screenshot stap1.](images/codeStap1.png)
+FOTO MICROBIT
+</details>
 
 ## stap 2: Alarm!
 **doel:** grove leren kennen  
