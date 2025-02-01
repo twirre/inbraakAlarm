@@ -31,7 +31,7 @@ basic.showIcon(IconNames.Happy)
 **wat moet je doen?** Ansluiten grove led. Als je op de knop A drukt moet de micro.bit één keer geluid maken het de led driekeer laten knipperen 
 
 > [!TIP]
-> Zorg ervoor dat je de groveinstructie set benaderbaar maakt in makecode. Dit doe je door bij uitbreidingen, grove te selecteren.
+> In het boekje van de grove inventorkit staat beschreven hoe je de led aansluit.
 
 <details>
 <summary>uitwerking: Alarm! (stap2)</summary>
@@ -40,16 +40,20 @@ basic.showIcon(IconNames.Happy)
 ![makecode](images/codeStap2.png)
 
 ```javascript
-input.onGesture(Gesture.Shake, function () {
-    basic.showString("Hello!")
-})
-basic.showIcon(IconNames.Happy)
+input.onButtonPressed(Button.A, function () {
+    music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
+    for (let index = 0; index < 3; index++) {
+        pins.digitalWritePin(DigitalPin.P0, 1)
+        basic.pause(100)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        basic.pause(100)
+    }})
 ```
 </details>
 
 
 ## Boef gedetecteerd (stap3)
-***doel:** inbraakalarm bouwen, basis versie  
+**doel:** inbraakalarm bouwen, basis versie  
 **wat moet je doen?** aansluiten bewegingssensor en zorgen dat het alarm afgaat als iemand in de buurt komt.
 
 <details>
@@ -59,17 +63,19 @@ basic.showIcon(IconNames.Happy)
 ![makecode](images/codeStap3.png)
 
 ```javascript
-input.onGesture(Gesture.Shake, function () {
-    basic.showString("Hello!")
-})
-basic.showIcon(IconNames.Happy)
+basic.forever(function () {
+    if (grove.measureInInches(DigitalPin.P1) < 10) {
+        basic.showIcon(IconNames.No)
+    } else {
+        basic.showIcon(IconNames.Yes)
+    }})
 ```
 </details>
 
 
 
 ## hoe wil je het inbraakalarm uitbreiden? (extra stap)
-**surgesties: **
+**surgesties:**  
 * led strip gebruiken ipv led [moeilijkheidsgraad: MIDDEN]
 * tellen hoe vaak het alarm is afgegaan en op het schermpje tonen [moeilijkheidsgraad: MIDDEN]
 * radio sigaal doorsturen naar de tweede micro.bit [moeilijkheidsgraad: MOEILIJK]
