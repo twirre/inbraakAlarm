@@ -1,5 +1,5 @@
 # inbraakAlarm
-Een project voor de bibliotheek Heerenveen waar we een inbraak alarm bouwen. 
+Een project voor de bibliotheek Heerenveen waar we een inbraakalarm bouwen. 
 
 Wat heb je nodig
 - een micro.bit
