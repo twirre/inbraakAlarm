@@ -1,36 +1,74 @@
 # inbraakAlarm
-project voor de jeugd met micro.bit en grove inventorkit
+Een project voor de bibliotheek Heerenveen waar we een inbraak alarm bouwen. 
 
-IDE: https://makecode.microbit.org/
+Wat heb je nodig
+- een micro.bit
+- een grove inventorkit
+- een laptop met internet (https://makecode.microbit.org/)
 
-opgebouwd in de volgende stappen
+Onderstaande stappen laten je kennis maken met alle onderdelen. Probeer eerst zelf de oplossing te maken. Bij iedere stap zit een uitwerking, deze kun je bekijken als je zelf er even niet uitkomt.
 
-## stap 1: Welkom
-**doel:** micro.bit leren kennen
+## Welkom (stap1)
+**doel:** micro.bit leren kennen  
+**wat moet je done?** Zorg voor een melding, bijvoorbeeld je naam, op het scherm.
+
 <details>
-<summary>zorg voor een melding, bijvoorbeeld je naam, op het scherm</summary>
+<summary>uitwerking: Welkom (stap1)</summary>
 
+![micro.bit setup: stap1.](images/microbitStap1.jpg)
+![makecode stap1.](images/codeStap1.png)
+
+```javascript
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("Hello!")
+})
+basic.showIcon(IconNames.Happy)
 ```
-JAVASCRIPT;
-```
-FOTO CODE  
-![Screenshot stap1.](images/codeStap1.png)
-FOTO MICROBIT
 </details>
 
-## stap 2: Alarm!
+## Alarm! (stap2)
 **doel:** grove leren kennen  
-**actie:** aansluiten grove led  
-**code:** gebruik knop A op de micro.bit, om 
-* micro.bit één keer te laten piepen
-* grove: Lampje drie keer laten knipperen
+**wat moet je doen?** Ansluiten grove led. Als je op de knop A drukt moet de micro.bit één keer geluid maken het de led driekeer laten knipperen 
 
-## stap 3: Boef gedetecteerd
+> [!TIP]
+> Zorg ervoor dat je de groveinstructie set benaderbaar maakt in makecode. Dit doe je door bij uitbreidingen, grove te selecteren.
+
+<details>
+<summary>uitwerking: Alarm! (stap2)</summary>
+
+![micro.bit setup](images/microbitStap2.jpg)
+![makecode](images/codeStap2.png)
+
+```javascript
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("Hello!")
+})
+basic.showIcon(IconNames.Happy)
+```
+</details>
+
+
+## Boef gedetecteerd (stap3)
 ***doel:** inbraakalarm bouwen, basis versie  
-**actie:** aansluiten bewegingssensor  
-**Code:** als je in de buurt komt moet het alarm af gaan.
+**wat moet je doen?** aansluiten bewegingssensor en zorgen dat het alarm afgaat als iemand in de buurt komt.
 
-## stap extra: hoe wil je het inbraakalarm uitbreiden?
+<details>
+<summary>uitwerking: Boef gedetecteerd (stap3)</summary>
+
+![micro.bit setup](images/microbitStap3.jpg)
+![makecode](images/codeStap3.png)
+
+```javascript
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("Hello!")
+})
+basic.showIcon(IconNames.Happy)
+```
+</details>
+
+
+
+## hoe wil je het inbraakalarm uitbreiden? (extra stap)
 **surgesties: **
 * led strip gebruiken ipv led [moeilijkheidsgraad: MIDDEN]
 * tellen hoe vaak het alarm is afgegaan en op het schermpje tonen [moeilijkheidsgraad: MIDDEN]
